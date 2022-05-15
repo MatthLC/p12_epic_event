@@ -17,24 +17,19 @@ class IsClientManager(BasePermission):
                 return True
 
             if user.groups.filter(name='MANAGER').exists():
-
-                if request.user.is_authenticated:
-                    return True
+                return request.user.is_authenticated
 
             if user.groups.filter(name='SALES').exists():
-
-                if (
+                return (
                     request.user.is_authenticated
                     and request.method in SALES_GRANTED_METHOD
-                ):
-                    return True
+                )
 
             if user.groups.filter(name='SUPPORT').exists():
-                if (
+                return (
                     request.user.is_authenticated
                     and request.method in SUPPORT_GRANTED_METHOD
-                ):
-                    return True
+                )
 
             return False
 
@@ -56,24 +51,19 @@ class IsContractManager(BasePermission):
                 return True
 
             if user.groups.filter(name='MANAGER').exists():
-
-                if request.user.is_authenticated:
-                    return True
+                return request.user.is_authenticated
 
             if user.groups.filter(name='SALES').exists():
-
-                if (
+                return (
                     request.user.is_authenticated
                     and request.method in SALES_GRANTED_METHOD
-                ):
-                    return True
+                )
 
             if user.groups.filter(name='SUPPORT').exists():
-                if (
+                return (
                     request.user.is_authenticated
                     and request.method in SUPPORT_GRANTED_METHOD
-                ):
-                    return True
+                )
 
             return False
 
@@ -95,24 +85,19 @@ class IsEventManager(BasePermission):
                 return True
 
             if user.groups.filter(name='MANAGER').exists():
-
-                if request.user.is_authenticated:
-                    return True
+                return request.user.is_authenticated
 
             if user.groups.filter(name='SALES').exists():
-
-                if (
+                return (
                     request.user.is_authenticated
                     and request.method in SALES_GRANTED_METHOD
-                ):
-                    return True
+                )
 
             if user.groups.filter(name='SUPPORT').exists():
-                if (
+                return (
                     request.user.is_authenticated
                     and request.method in SUPPORT_GRANTED_METHOD
-                ):
-                    return True
+                )
 
             return False
 

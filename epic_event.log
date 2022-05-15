@@ -151,3 +151,12 @@ Bad Request: /contracts/
 Bad Request: /contracts/
 Bad Request: /contracts/1/
 Bad Request: /contracts/1/
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\authentication\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\authentication\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\authentication\permissions.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /signup/
+Bad Request: /signup/

@@ -13,9 +13,7 @@ class IsManager(BasePermission):
                 return True
 
             if user.groups.filter(name='MANAGER').exists():
-
-                if request.user.is_authenticated:
-                    return True
+                return request.user.is_authenticated
 
             return False
 

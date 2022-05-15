@@ -26,8 +26,8 @@ class ClientListSerializer(ModelSerializer):
         user = get_object_or_404(User, id=data['sales_contact'].id)
         if user.groups.filter(name='SALES').exists():
             return data
-        else:
-            raise serializers.ValidationError('Your contact does not belong to the sales team')
+
+        raise serializers.ValidationError('Your contact does not belong to the sales team')
 
 
 class ClientDetailsSerializer(ModelSerializer):
@@ -58,14 +58,14 @@ class ContractListSerializer(ModelSerializer):
         user = get_object_or_404(User, id=data['sales_contact'].id)
         if user.groups.filter(name='SALES').exists():
             return data
-        else:
-            raise serializers.ValidationError('Your contact does not belong to the sales team')
+
+        raise serializers.ValidationError('Your contact does not belong to the sales team')
 
     def validate_amount(self, value):
         if value < 0:
             raise serializers.ValidationError('Amount must be egual or superior to 0.')
-        else:
-            return value
+
+        return value
 
 
 class ContractDetailsSerializer(ModelSerializer):
@@ -94,21 +94,21 @@ class EventListSerializer(ModelSerializer):
         user = get_object_or_404(User, id=data['support_contact'].id)
         if user.groups.filter(name=['SUPPORT']).exists():
             return data
-        else:
-            raise serializers.ValidationError('Your contact does not belong to the support team')
+
+        raise serializers.ValidationError('Your contact does not belong to the support team')
 
     def validate_event_date(self, value):
         USER_DATETIME = datetime.now().strftime("%Y-%m-%d")
         if USER_DATETIME > str(value):
             raise serializers.ValidationError('Check the date of the event. Yesterday is not tomorrow.')
-        else:
-            return value
+
+        return value
 
     def validate_attendees(self, value):
         if value < 0:
             raise serializers.ValidationError('Attendees must be egual or superior to 0.')
-        else:
-            return value
+
+        return value
 
 
 class EventDetailsSerializer(ModelSerializer):

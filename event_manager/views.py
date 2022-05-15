@@ -39,8 +39,7 @@ class ClientViewset(MultipleSerializerMixin, ModelViewSet):
         elif self.request.user.groups.filter(name__in=['SUPPORT']).exists():
             return Client.objects.filter(contributors=self.request.user).distinct()
 
-        else:
-            raise PermissionDenied
+        raise PermissionDenied
 
     def perform_update(self, serializer):
         if self.request.user.groups.filter(name='MANAGER').exists():
@@ -52,8 +51,7 @@ class ClientViewset(MultipleSerializerMixin, ModelViewSet):
         ):
             serializer.save()
 
-        else:
-            raise PermissionDenied
+        raise PermissionDenied
 
 
 class ContractViewset(MultipleSerializerMixin, ModelViewSet):
@@ -78,8 +76,7 @@ class ContractViewset(MultipleSerializerMixin, ModelViewSet):
 
             serializer.save()
 
-        else:
-            raise PermissionDenied
+        raise PermissionDenied
 
 
 class EventViewset(MultipleSerializerMixin, ModelViewSet):
@@ -96,8 +93,7 @@ class EventViewset(MultipleSerializerMixin, ModelViewSet):
         elif self.request.user.groups.filter(name__in=['SUPPORT']).exists():
             return Event.objects.filter(support_contact=self.request.user)
 
-        else:
-            raise PermissionDenied
+        raise PermissionDenied
 
     def perform_create(self, serializer):
         client_id = serializer.validated_data['client'].id
@@ -111,23 +107,25 @@ class EventViewset(MultipleSerializerMixin, ModelViewSet):
                 client=client,
                 event_id=event.id
             )
+
         else:
             raise APIException("The client does not own contract yet.")
 
     def perform_update(self, serializer):
         old_event_status = self.get_object().event_status
+
         if old_event_status == 'CLOSED':
             raise APIException("This event is closed.")
-        else:
-            old_event = self.get_object().id
-            old_support_contact_to_remove = Event.objects.get(id=old_event).support_contact.id
 
-            event = serializer.save()
-            client = get_object_or_404(Client, id=event.client.id)
+        old_event = self.get_object().id
+        old_support_contact_to_remove = Event.objects.get(id=old_event).support_contact.id
 
-            EventContributor.objects.filter(user=old_support_contact_to_remove, event_id=event.id).delete()
-            EventContributor.objects.create(
-                user=event.support_contact,
-                client=client,
-                event_id=event.id
-            )
+        event = serializer.save()
+        client = get_object_or_404(Client, id=event.client.id)
+
+        EventContributor.objects.filter(user=old_support_contact_to_remove, event_id=event.id).delete()
+        EventContributor.objects.create(
+            user=event.support_contact,
+            client=client,
+            event_id=event.id
+        )

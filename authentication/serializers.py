@@ -23,6 +23,10 @@ class UserSerializer(ModelSerializer):
                 raise serializers.ValidationError('Symbol detected.')
         return data
 
+    def validate_role(self, value):
+        if value in ['MANAGER', 'SALES', 'SUPPORT', 'UNKNOWN']:
+            return value
+
 
 class UserListSerializer(ModelSerializer):
     class Meta():
