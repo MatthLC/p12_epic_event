@@ -92,7 +92,7 @@ class EventListSerializer(ModelSerializer):
 
     def validate(self, data):
         user = get_object_or_404(User, id=data['support_contact'].id)
-        if user.groups.filter(name=['SUPPORT']).exists():
+        if user.groups.filter(name='SUPPORT').exists():
             return data
 
         raise serializers.ValidationError('Your contact does not belong to the support team')

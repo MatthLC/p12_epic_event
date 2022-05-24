@@ -12,11 +12,6 @@ class Client(models.Model):
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
     sales_contact = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
-    contributors = models.ManyToManyField(
-        settings.AUTH_USER_MODEL,
-        through='EventContributor',
-        related_name='event_contributions'
-    )
 
     class Meta:
         unique_together = ('first_name', 'last_name', 'email')
@@ -51,12 +46,3 @@ class Event(models.Model):
     attendees = models.IntegerField()
     event_date = models.DateField()
     notes = models.TextField(max_length=1024, blank=True)
-
-
-class EventContributor(models.Model):
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name='event_contributor')
-    client = models.ForeignKey('event_manager.Client', on_delete=models.CASCADE, related_name='contributor_event')
-    event_id = models.IntegerField()
-
-    class Meta:
-        unique_together = ('user', 'client', 'event_id')

@@ -4,7 +4,7 @@ from django.core.exceptions import PermissionDenied
 from rest_framework.viewsets import ModelViewSet
 from rest_framework.exceptions import APIException
 
-from event_manager.models import Client, Contract, Event, EventContributor
+from event_manager.models import Client, Contract, Event
 from event_manager.serializers import (
     ClientListSerializer, ClientDetailsSerializer,
     ContractListSerializer, ContractDetailsSerializer,
@@ -28,7 +28,9 @@ class MultipleSerializerMixin:
 class ClientViewset(MultipleSerializerMixin, ModelViewSet):
     serializer_class = ClientListSerializer
     detail_serializer_class = ClientDetailsSerializer
+
     permission_classes = [IsClientManager]
+
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['last_name', 'email']
 
@@ -36,20 +38,22 @@ class ClientViewset(MultipleSerializerMixin, ModelViewSet):
         if self.request.user.groups.filter(name__in=['MANAGER', 'SALES']).exists():
             return Client.objects.all()
 
-        elif self.request.user.groups.filter(name__in=['SUPPORT']).exists():
-            return Client.objects.filter(contributors=self.request.user).distinct()
+        elif self.request.user.groups.filter(name='SUPPORT').exists():
+
+            clients = Event.objects.filter(support_contact=self.request.user).values('client').distinct()
+            return Client.objects.filter(id__in=clients)
 
         raise PermissionDenied
 
     def perform_update(self, serializer):
         if self.request.user.groups.filter(name='MANAGER').exists():
-            serializer.save()
+            return serializer.save()
 
         elif (
             self.request.user.groups.filter(name__in=['SALES']).exists()
             and self.get_object().sales_contact == self.request.user
         ):
-            serializer.save()
+            return serializer.save()
 
         raise PermissionDenied
 
@@ -67,14 +71,14 @@ class ContractViewset(MultipleSerializerMixin, ModelViewSet):
 
     def perform_update(self, serializer):
         if self.request.user.groups.filter(name='MANAGER').exists():
-            serializer.save()
+            return serializer.save()
 
         elif (
             self.request.user.groups.filter(name__in=['SALES']).exists()
             and self.get_object().sales_contact == self.request.user
         ):
 
-            serializer.save()
+            return serializer.save()
 
         raise PermissionDenied
 
@@ -82,7 +86,9 @@ class ContractViewset(MultipleSerializerMixin, ModelViewSet):
 class EventViewset(MultipleSerializerMixin, ModelViewSet):
     serializer_class = EventListSerializer
     detail_serializer_class = EventDetailsSerializer
+
     permission_classes = [IsEventManager]
+
     filter_backends = [DjangoFilterBackend]
     filterset_fields = ['client__last_name', 'client__email', 'event_date']
 
@@ -90,7 +96,7 @@ class EventViewset(MultipleSerializerMixin, ModelViewSet):
         if self.request.user.groups.filter(name__in=['MANAGER', 'SALES']).exists():
             return Event.objects.all()
 
-        elif self.request.user.groups.filter(name__in=['SUPPORT']).exists():
+        elif self.request.user.groups.filter(name='SUPPORT').exists():
             return Event.objects.filter(support_contact=self.request.user)
 
         raise PermissionDenied
@@ -102,11 +108,6 @@ class EventViewset(MultipleSerializerMixin, ModelViewSet):
         if is_contract_signed:
             event = serializer.save()
             client = get_object_or_404(Client, id=event.client.id)
-            EventContributor.objects.create(
-                user=event.support_contact,
-                client=client,
-                event_id=event.id
-            )
 
         else:
             raise APIException("The client does not own contract yet.")
@@ -117,15 +118,4 @@ class EventViewset(MultipleSerializerMixin, ModelViewSet):
         if old_event_status == 'CLOSED':
             raise APIException("This event is closed.")
 
-        old_event = self.get_object().id
-        old_support_contact_to_remove = Event.objects.get(id=old_event).support_contact.id
-
-        event = serializer.save()
-        client = get_object_or_404(Client, id=event.client.id)
-
-        EventContributor.objects.filter(user=old_support_contact_to_remove, event_id=event.id).delete()
-        EventContributor.objects.create(
-            user=event.support_contact,
-            client=client,
-            event_id=event.id
-        )
+        return serializer.save()
