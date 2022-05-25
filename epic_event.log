@@ -1,0 +1,383 @@
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\epicevent\urls.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\epicevent\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Unauthorized: /contracts/
+Internal Server Error: /contracts/
+Traceback (most recent call last):
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\generics.py", line 150, in filter_queryset
+    queryset = backend().filter_queryset(self.request, queryset, self)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django_filters\rest_framework\backends.py", line 90, in filter_queryset
+    filterset = self.get_filterset(request, queryset, view)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django_filters\rest_framework\backends.py", line 31, in get_filterset
+    filterset_class = self.get_filterset_class(view, queryset)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django_filters\rest_framework\backends.py", line 73, in get_filterset_class
+    class AutoFilterSet(self.filterset_base):
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django_filters\filterset.py", line 71, in __new__
+    new_class.base_filters = new_class.get_filters()
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django_filters\filterset.py", line 358, in get_filters
+    raise TypeError(
+TypeError: 'Meta.fields' must not contain non-model field names: last_name
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Unauthorized: /events/
+Watching for file changes with StatReloader
+Unauthorized: /login/
+Unauthorized: /userlist/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /clients/1/
+Traceback (most recent call last):
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\mixins.py", line 56, in retrieve
+    return Response(serializer.data)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 507, in to_representation
+    for field in fields:
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 368, in _readable_fields
+    for field in self.fields.values():
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 1076, in get_fields
+    field_class, field_kwargs = self.build_field(
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 1222, in build_field
+    return self.build_unknown_field(field_name, model_class)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\serializers.py", line 1340, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `sales_contactname_sales_contact` is not valid for model `Client`.
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /clients/
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Unauthorized: /contracts/2/
+Not Found: /contracts/2/
+Unauthorized: /contracts/
+Bad Request: /contracts/
+Bad Request: /contracts/
+Bad Request: /contracts/1/
+Bad Request: /contracts/1/
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\authentication\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\authentication\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\authentication\permissions.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /signup/
+Bad Request: /signup/
+Watching for file changes with StatReloader
+Bad Request: /login/refresh/
+Unauthorized: /userlist/
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Unauthorized: /login/
+Not Found: /favicon.ico
+Unauthorized: /signup/
+Unauthorized: /userlist/
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\authentication\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\serializers.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /clients/
+Traceback (most recent call last):
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py", line 44, in get_queryset
+    print(clients.client)
+AttributeError: 'QuerySet' object has no attribute 'client'
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /clients/
+Traceback (most recent call last):
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py", line 42, in get_queryset
+    clients = Event.objects.filter(support_contact=self.request.user).get(client)
+NameError: name 'client' is not defined
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /clients/
+Traceback (most recent call last):
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py", line 43, in get_queryset
+    test = Event.objects.values_list('client', flat=True).get(support_contact=self.request.user)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\db\models\query.py", line 499, in get
+    raise self.model.MultipleObjectsReturned(
+event_manager.models.Event.MultipleObjectsReturned: get() returned more than one Event -- it returned 2!
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /clients/
+Traceback (most recent call last):
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\rest_framework\mixins.py", line 38, in list
+    queryset = self.filter_queryset(self.get_queryset())
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py", line 43, in get_queryset
+    test = Event.objects.values_list('client', flat=True).get(support_contact=self.request.user).distinct()
+  File "D:\-- Formation --\-- projets --\p12_sql\livrable\env\lib\site-packages\django\db\models\query.py", line 499, in get
+    raise self.model.MultipleObjectsReturned(
+event_manager.models.Event.MultipleObjectsReturned: get() returned more than one Event -- it returned 2!
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Internal Server Error: /events/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\admin.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\models.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /favicon.ico
+Unauthorized: /signup/
+Bad Request: /signup/
+Bad Request: /clients/
+Bad Request: /clients/1/
+Forbidden: /clients/1/
+Forbidden: /clients/1/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Forbidden: /clients/1/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\permissions.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\permissions.py changed, reloading.
+Watching for file changes with StatReloader
+Forbidden: /clients/1/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\permissions.py changed, reloading.
+Watching for file changes with StatReloader
+Forbidden: /clients/1/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\permissions.py changed, reloading.
+Watching for file changes with StatReloader
+Forbidden: /clients/1/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\permissions.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Forbidden: /clients/1/
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\-- Formation --\-- projets --\p12_sql\livrable\epicevent\event_manager\views.py changed, reloading.
+Watching for file changes with StatReloader
+Bad Request: /clients/
+Bad Request: /contracts/
+Forbidden: /contracts/2/
+Bad Request: /events/
+Bad Request: /events/
+Internal Server Error: /events/
+Unauthorized: /contracts/1/
+Forbidden: /events/
+Not Found: /events/7/
+Forbidden: /events/1/
+Not Found: /events/7/
