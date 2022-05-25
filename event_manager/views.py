@@ -1,4 +1,3 @@
-from django.shortcuts import get_object_or_404
 from django.core.exceptions import PermissionDenied
 
 from rest_framework.viewsets import ModelViewSet
@@ -106,8 +105,7 @@ class EventViewset(MultipleSerializerMixin, ModelViewSet):
         is_contract_signed = Contract.objects.filter(client=client_id, status=True)
 
         if is_contract_signed:
-            event = serializer.save()
-            client = get_object_or_404(Client, id=event.client.id)
+            serializer.save()
 
         else:
             raise APIException("The client does not own contract yet.")

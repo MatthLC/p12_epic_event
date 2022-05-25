@@ -15,7 +15,7 @@ class IsClientManager(BasePermission):
 
             if request.user.is_authenticated and request.user.is_superuser:
                 return True
-            
+
             if user.groups.filter(name='MANAGER').exists():
                 return request.user.is_authenticated
 
